@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>태민스토어</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+  <link rel="shortcut icon" type="image/x-icon" href="favicons.png" />
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Noto Sans KR';
+    }
+    audio {
+      height: 31px;
+      padding-right: 50px;
+    }
+
+    header {
+      position: fixed;
+      height: 100px;
+      padding-top: 40px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.9);
+      z-index: 999;
+    }
+
+    .header-logo-img {
+      width: 150px;
+      height: 23px;
+      margin-bottom: 25px;
+    }
+
+    .header-name {
+      text-align: center;
+      font-size: 22px;
+    }
+
+    nav {
+      display: flex;
+    }
+
+    .nav-left,
+    .nav-right {
+      display: flex;
+      flex: 1;
+      padding-left: 97px;
+    }
+
+    .nav-center {
+      display: contents;
+      flex: 1;
+      color: #555555;
+    }
+
+
+    .nav-left-menu-item {
+      padding-left: 10px;
+      padding-right: 10px;
+      font-size: 120%;
+      font-weight: bold;
+      margin-bottom: 3px;
+      letter-spacing: 5px;
+    }
+
+    .nav-center-item {
+      padding-left: 15px;
+      padding-right: 15px;
+      font-size: 90%;
+      padding-top: 6px;
+
+    }
+
+    .nav-right-item {
+      padding-left: 10px;
+      padding-right: 10px;
+      color: #000000;
+      text-decoration: none;
+    }
+
+    .nav-right-item :visited {
+      color: #000000;
+    }
+
+    .header-section-between {
+      padding-top: 158px;
+    }
+
+    .section3-main {
+      width: 100%;
+    }
+
+    .section-between {
+      margin-top: 40px;
+    }
+
+    .section2 {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .section2-box1 {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1200px;
+      display: flex;
+    }
+
+    .section2-box1-picture1 {
+      flex: 2;
+      padding-right: 10px;
+      padding-top: 3px;
+      padding-bottom: 3px;
+    }
+    .section2-box1-picture1-img {
+      width: 100%;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 10px 0px
+    }
+
+
+    .section2-box2 {
+      padding-bottom: 5px;
+      flex: 1;
+    }
+
+    
+    .section2-box2-img1 {
+      width: 100%;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .section2-box2-img2 {
+      width: 100%;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+  
+    .section3 {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .section3-box {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1200px;
+      display: flex;
+    }
+
+    .section3-picturne1-item {
+      width: 100%;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .section2-box1-picture1-img:hover {
+      box-shadow: rgba(0, 0, 0, 0.8) 0px 8px 10px 0px
+    }
+
+    .section2-box2-img1:hover {
+      box-shadow: rgba(0, 0, 0, 0.5) 0px 8px 10px 0px
+    }
+
+    .section2-box2-img2:hover {
+      box-shadow: rgba(0, 0, 0, 0.5) 0px 8px 10px 0px
+    }
+
+    .section3-picturne1-item:hover {
+      box-shadow: rgba(0, 0, 0, 0.8) 0px 8px 10px 0px
+    }
+
+    .section3-picture2-item:hover {
+      box-shadow: rgba(0, 0, 0, 0.8) 0px 8px 10px 0px
+    }
+
+    .section3-picture3-item:hover {
+      box-shadow: rgba(0, 0, 0, 0.8) 0px 8px 10px 0px
+    }
+
+    .section3-picture4-item:hover {
+      box-shadow: rgba(0, 0, 0, 0.8) 0px 8px 10px 0px
+    }
+
+    .section3-picture-005-item:hover {
+      box-shadow: rgba(0, 0, 0, 0.8) 0px 8px 10px 0px
+    }
+
+    .product-info {
+      text-align: center;
+    }
+
+    .brand_name {
+      font-size: 110%;
+    }
+
+    .product_name {
+      font-size: 40%;
+    }
+
+    .sale-rate {
+      color: red;
+    }
+
+    .price-sail {
+      color: red;
+    }
+
+    .product_price_before {
+      color: #999;
+      text-decoration: line-through;
+    }
+
+    .section3-picture2-item {
+      width: 100%;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .section3-picture3-item {
+      width: 100%;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .section3-picture4-item {
+      width: 100%;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .section3-picture-005-item {
+      width: 100%;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .section3-picture-006-item {
+      width: 100%;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .button-insta {
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: center;
+      border: solid 2px #3E5939;
+      color: #3E5939;
+      width: 130px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 90%;
+      transition: 0.3s;
+      cursor: pointer;
+      margin-top: -30px;
+    }
+
+    .button-insta:hover {
+      color: #ffffff;
+      background-color: rgb(129, 30, 133);
+    }
+
+
+
+    .section-contact {
+      text-align: center;
+      margin-top: 70px;
+      margin-bottom: 50px;
+    }
+
+    .drawLine {
+      width: 10%;
+      display: inline-block;
+      margin-bottom: 30px;
+      border: solid 0.5px rgb(62, 89, 57);
+    }
+
+    .section-contact-first {
+      font-size: 120%;
+      font-weight: bold;
+      margin-bottom: 3px;
+      letter-spacing: 2px;
+    }
+
+
+    .section-contact-second {
+      font-size: 80%;
+      color:#583203;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class='header-name'>태민스토어</div>
+
+    <nav>
+      <div class='nav-left'>
+        <div class='nav-left-menu-item'>
+          <audio src="index-bgm.mp3" autoplay controls loop >
+            지원 x
+          </audio>
+        </div>
+      </div> 
+
+      <div class='nav-center'>
+        <div class="nav-center-item">홈</div>
+        <div class="nav-center-item">랭킹</div>
+        <div class="nav-center-item">티셔츠</div>
+        <div class="nav-center-item">프리오더</div>
+        <div class="nav-center-item">뷰티</div>
+        <div class="nav-center-item">카테고리</div>
+        <div class="nav-center-item">태민그램</div>
+        <div class="nav-center-item">브랜드</div>
+        <div class="nav-center-item">스타일</div>
+        <div class="nav-center-item">신상</div>
+        <div class="nav-center-item">세일</div>
+        <div class="nav-center-item">기획전</div>
+      </div>
+
+
+      <div class='nav-right'>
+        <a class='nav-right-item' href="login.html">입장하기</a>
+      </div>
+    </nav>
+
+  </header>
+
+  <div class='header-section-between'></div>
+
+  <section class='section1'>
+    <img class='section3-main' src="main-image.gif" alt="main-img">
+  </section>
+
+  <section class='section2'>
+    <div class='section2-box1'>
+      <div class='section2-box1-picture1'>
+        <img class='section2-box1-picture1-img' src='section2/section2-1.jpg' alt="section2-1">
+      </div>
+      <div class='section2-box2'>
+        <div class='section2-box2'>
+          <img class='section2-box2-img1' src='section2/section2-2-1.jpg' alt="section2-2-1">
+        </div>
+        <div class='section2-box2-img2'>
+          <img class='section2-box2-img2' src='section2/section2-2-2.jpg' alt="section2-2-2">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section3">
+    <div class='section3-box'>
+      <div class='section3-picturne1'>
+        <img class='section3-picturne1-item' src='item/item1.jpg' alt="itm1">
+        <div class="product-info">
+          <div class="brand_name">[HIDE]</div>
+          <div class="product_name">HIDE Overfit Record T-Shirt_Iovry</div>
+          <span class="product_price">35,000</span>
+          <span class="price-costomer">회원할인</span>
+        </div>
+      </div>
+      <div class='section3-picture2'>
+        <img class='section3-picture2-item' src='item/item2.jpg' alt="item2">
+        <div class="product-info">
+          <div class="brand_name">[비바스튜디오]</div>
+          <div class="product_name">LOCATION SHORT SLEEVE JS [BLACK]</div>
+          <span class="product_price_before">30,100</span>
+          <span class="sale-rate">21%</span>
+          <span class="price-sail">23,800</span>
+        </div>
+      </div>
+      <div class='section3-picture3'>
+        <img class='section3-picture3-item' src='item/item3.jpg' alt="itme3">
+        <div class="product-info">
+          <div class="brand_name">[필루미네이트]</div>
+          <div class="product_name">유니섹스 오버핏 어스넷 로고 티-블랙</div>
+          <span class="product_price">33,000</span>
+          <span class="price-costomer">회원할인</span>
+        </div>
+      </div>
+      <div class='section3-picture4'>
+        <img class='section3-picture4-item' src='item/item4.jpg' alt="item4">
+        <div class="product-info">
+          <div class="brand_name">[브랜디드]]</div>
+          <div class="product_name">1931 OBJECT JEANS[CROP STRAIGHT]</div>
+          <span class="product_price_before">78,100</span>
+          <span class="sale-rate">24%</span>
+          <span class="price-sail">59,000</span>
+        </div>
+      </div>
+      <div class='section3-picture-005'>
+        <img class='section3-picture-005-item' src='item/item7.jpg' alt="item7">
+        <div class="product-info">
+          <div class="brand_name">[트릴리온]</div>
+          <div class="product_name">[패키지]에센셜 레이어드 롱 슬리브</div>
+          <span class="product_price_before">78,000</span>
+          <span class="sale-rate">55%</span>
+          <span class="price-sail">34,900</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class='section-contact'>
+    <div class='drawLine'></div>
+    <p class='section-contact-first'>이 메 일 주 소</p>
+    <br>
+    <a class='section-contact-second' href="mailto:36xoals@naver.com">Send email</a>
+  </section>
+
+  <section class='section-contact'>
+    <div class='drawLine'></div>
+    <p class='section-contact-first'>전화번호</p>
+    <br>
+    <a class='section-contact-second' href="tel:+82010-1234-5678"> 010-1234-5678</a>
+  </section>
+
+  <section class='section-contact'>
+    <div class='drawLine'></div>
+    <p class='section-contact-first'>More picture</p>
+    <p class='section-contact-second'>더 많은 사진</p>
+    <br>
+    <div class='button-insta'>#태민스타그램</div>
+  </section>
+  
+</body>
+
+</html>
